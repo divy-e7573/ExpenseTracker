@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign Up | Expense Tracker</title>
+<!-- BEGIN: Scripts and Configuration -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            finance: {
+              primary: '#2563eb', // Professional blue
+              secondary: '#1e40af',
+              accent: '#10b981', // Success green for balance/profit
+              dark: '#0f172a',
+              light: '#f8fafc'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- END: Scripts and Configuration -->
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="custom-layout">
+    body {
+      background: radial-gradient(circle at top right, #f1f5f9, #e2e8f0);
+      min-height: 100vh;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="flex items-center justify-center p-4">
+<!-- BEGIN: Signup Container -->
+<main class="w-full max-w-md" data-purpose="signup-container">
+<div class="glass-card shadow-2xl rounded-2xl overflow-hidden">
+<!-- BEGIN: Header Section -->
+<div class="px-8 pt-8 pb-6 text-center" data-purpose="form-header">
+<div class="inline-flex items-center justify-center w-16 h-16 bg-finance-primary rounded-xl mb-4 shadow-lg shadow-blue-200">
+<!-- Finance Icon Placeholder -->
+<svg class="h-10 w-10 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h1 class="text-3xl font-bold text-finance-dark tracking-tight">Create Account</h1>
+<p class="text-slate-500 mt-2">Start tracking your financial journey today</p>
+</div>
+<!-- END: Header Section -->
+<!-- BEGIN: Form Section -->
+<form action="#" class="px-8 pb-8 space-y-5" data-purpose="signup-form" method="POST">
+<!-- Full Name Field -->
+<div class="space-y-1">
+<label class="block text-sm font-semibold text-slate-700" for="full-name">Full Name</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-finance-primary focus:border-transparent transition duration-200" id="full-name" name="name" placeholder="John Doe" required="" type="text"/>
+</div>
+</div>
+<!-- Email Field -->
+<div class="space-y-1">
+<label class="block text-sm font-semibold text-slate-700" for="email">Email Address</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-finance-primary focus:border-transparent transition duration-200" id="email" name="email" placeholder="name@company.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-1">
+<label class="block text-sm font-semibold text-slate-700" for="password">Password</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-finance-primary focus:border-transparent transition duration-200" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+<p class="text-xs text-slate-400 mt-1">Must be at least 8 characters</p>
+</div>
+<!-- Terms Checkbox -->
+<div class="flex items-start" data-purpose="terms-checkbox">
+<div class="flex items-center h-5">
+<input class="h-4 w-4 text-finance-primary border-slate-300 rounded focus:ring-finance-primary" id="terms" name="terms" required="" type="checkbox"/>
+</div>
+<div class="ml-3 text-xs">
+<label class="text-slate-500" for="terms">I agree to the <a class="text-finance-primary hover:underline font-medium" href="#">Terms of Service</a> and <a class="text-finance-primary hover:underline font-medium" href="#">Privacy Policy</a>.</label>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-finance-primary hover:bg-finance-secondary text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 transform hover:-translate-y-0.5" data-purpose="submit-btn" type="submit">
+          Create Account
+        </button>
+</form>
+<!-- END: Form Section -->
+<!-- BEGIN: Footer Section -->
+<div class="px-8 py-6 bg-slate-50 border-t border-slate-100 text-center" data-purpose="form-footer">
+<p class="text-sm text-slate-600">
+          Already have an account? 
+          <a class="text-finance-primary font-bold hover:text-finance-secondary transition duration-200" href="/login_page.html">Log in</a>
+</p>
+</div>
+<!-- END: Footer Section -->
+</div>
+<!-- BEGIN: Trust Badges -->
+<div class="mt-8 text-center" data-purpose="trust-badges">
+<p class="text-xs text-slate-400 uppercase tracking-widest font-semibold mb-3">Trusted Security</p>
+<div class="flex justify-center space-x-6 opacity-40 grayscale">
+<!-- Mock Security Icons -->
+<div class="flex items-center text-xs font-bold text-slate-600">
+<svg class="h-4 w-4 mr-1" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M2.166 4.9L10 .303l7.834 4.597C17.834 4.897 18 11.637 10 16.342 2 11.637 2.166 4.897 2.166 4.9zM10 2.05L4.166 5.5c0 5.163 4.25 9.155 5.834 10.334 1.584-1.18 5.834-5.171 5.834-10.334L10 2.05zM10 5a1 1 0 011 1v2h1a1 1 0 110 2H9a1 1 0 110-2h1V6a1 1 0 011-1z" fill-rule="evenodd"></path></svg>
+          SSL SECURE
+        </div>
+<div class="flex items-center text-xs font-bold text-slate-600">
+<svg class="h-4 w-4 mr-1" fill="currentColor" viewbox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path clip-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" fill-rule="evenodd"></path></svg>
+          ENCRYPTED
+        </div>
+</div>
+</div>
+<!-- END: Trust Badges -->
+</main>
+<!-- END: Signup Container -->
+<script src="/js/utils.js"></script>
+<script src="/js/auth.js"></script>
+</body></html>
